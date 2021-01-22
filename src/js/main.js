@@ -45,3 +45,17 @@ for (let index = 0; index < modalTriggers.length; index++) {
       document.body.append(modalWrapper);
    });
 }
+
+// Scroll Smooth
+const smoothScroll = document.querySelectorAll("a[href^='#']");
+for (let index = 0; index < smoothScroll.length; index++) {
+   const el = smoothScroll[index];
+
+   el.addEventListener('click', function (ev) {
+      ev.preventDefault();
+      if (document.getElementById(this.getAttribute('href').replace('#', '')))
+         document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth',
+         });
+   });
+}
