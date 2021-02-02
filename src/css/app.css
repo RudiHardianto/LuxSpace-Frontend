@@ -68,3 +68,11 @@
       grid-auto-rows: minmax(180px, auto);
    }
 }
+
+a.card svg g circle.dot {
+   @apply hidden;
+}
+
+a.card.card-filled svg g circle.dot {
+   @apply block;
+}
